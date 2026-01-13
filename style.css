@@ -1,0 +1,672 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: #8aac35;
+    padding: 15px 0;
+    border-bottom: 2px solid #a3cc39;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.btn-whats {
+    background-color: #a3cc39;
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(imagens/paisagem.avif);
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+}
+
+/* Conteúdo Principal */
+.intro-section {
+    padding: 60px 0;
+    text-align: center; /* Centraliza o bloco principal */
+}
+
+.text-block {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left; /* Tópicos de texto alinhados à esquerda dentro do bloco centralizado */
+}
+
+.subtitle { color: #8aac35; font-style: italic; }
+.cft { font-weight: bold; margin: 10px 0; }
+.divider { width: 50px; height: 3px; background: #a3cc39; margin: 15px 0; }
+.quote { font-weight: bold; font-size: 18px; margin-bottom: 20px; }
+
+/* Serviços */
+.services-section { padding-bottom: 60px; }
+.center-title { text-align: center; margin-top: 40px; }
+.divider-center { width: 50px; height: 3px; background: #a3cc39; margin: 10px auto 40px; }
+
+.grid-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    text-align: left; /* Exigência: textos dos tópicos à esquerda */
+    padding: 20px;
+    border: 1px solid #eee;
+    border-top: 4px solid #a3cc39;
+}
+
+/* Newsletter e Rodapé */
+.newsletter-bar { background: #a3cc39; color: white; padding: 40px 0; }
+.news-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+
+#newsletterForm input { padding: 10px; width: 300px; border: none; }
+#newsletterForm button { padding: 10px 20px; background: #333; color: white; border: none; cursor: pointer; }
+
+.footer-bottom { background: #222; color: #ccc; padding: 50px 0 20px; text-align: center; }
+.footer-contact h4 { color: white; margin-bottom: 15px; position: relative; padding-bottom: 10px; }
+.footer-contact h4::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 2px; background: #a3cc39; }
+.copy { margin-top: 40px; font-size: 12px; opacity: 0.6; }
+
+.stat-item {
+    padding: 20px;
+}
+.stat-item h2 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+.stat-item p {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #666;
+}
+small {
+    color: #a3cc39;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* Links do Menu */
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease; /* Faz a transição de cor ser suave */
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav ul li a:hover {
+    color: #a3cc39; /* Muda para o verde da marca */
+}
+
+/* Efeito de linha surgindo embaixo do link */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #a3cc39;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* A linha cresce ao passar o mouse */
+}
+
+.service-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    border-top: 4px solid #a3cc39;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Anima posição e sombra */
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Faz o card subir 10 pixels */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra mais forte */
+    background-color: #fdfdfd;
+}
+
+/* Botão Geral */
+button, .btn-whats {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover, .btn-whats:hover {
+    filter: brightness(1.1); /* Deixa o botão levemente mais claro */
+    transform: scale(1.05); /* Aumenta o tamanho em 5% */
+}
+
+button:active, .btn-whats:active {
+    transform: scale(0.95); /* Efeito de 'clique' diminuindo levemente */
+}
+
+.stat-item {
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: scale(1.1);
+}
+
+.stat-item h2 {
+    transition: color 0.3s ease;
+}
+
+.stat-item:hover h2 {
+    color: #2e4a2e; /* Muda do verde para o cinza escuro ao focar */
+}
+/* Remove a cor azul e o sublinhado dos links dos cards */
+.card-link {
+    text-decoration: none;
+    color: inherit; /* Faz o link herdar a cor preta/cinza do texto original */
+    display: block; /* Garante que toda a área do card seja clicável */
+}
+
+/* Garante que o card continue com a animação que criamos anteriormente */
+.service-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo específico para o card de solicitação */
+.card-solicitacao {
+    background: #f1f8e9; /* Um verde bem clarinho para destacar dos outros cards brancos */
+    border: 2px dashed #a3cc39; /* Borda tracejada para parecer um cupom/convite */
+    text-align: center !important; /* Centraliza o conteúdo deste card específico */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-solicitacao {
+    margin-bottom: 15px;
+    animation: pulse 2s infinite; /* Faz o ícone do whats "pulsar" */
+}
+
+.btn-solicitar {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #25d366; /* Verde oficial do WhatsApp */
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-solicitar:hover {
+    background-color: #128c7e;
+    transform: scale(1.05);
+}
+
+/* Animação de pulso para o ícone */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Container da Barra de Contato */
+.contact-bar {
+    background: #8aac35; /* Verde Centralgeo */
+    padding: 30px 0;
+}
+
+.contact-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Grupos de botões */
+.contact-buttons, .social-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-buttons p {
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Estilo dos Botões de Contato (WhatsApp e Email) */
+.btn-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    color: #333;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-footer img {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-footer:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    background: #f0f0f0;
+}
+
+/* Estilo dos Botões Sociais circulares */
+.btn-social {
+    background: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-social img {
+    width: 24px;
+    height: 24px;
+}
+
+.btn-social:hover {
+    transform: scale(1.1) rotate(10deg);
+    background: #333; /* Fica escuro ao passar o mouse */
+}
+
+/* Ajuste Responsivo para Celular */
+@media (max-width: 768px) {
+    .contact-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* --- ESTILO DO BOTÃO HAMBÚRGUER --- */
+.menu-toggle {
+    display: none; /* Escondido no computador */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+/* Isso garante que o botão comece escondido no computador */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+/* Garante que os links fiquem em linha no computador */
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+/* --- RESPONSIVIDADE (CELULAR) --- */
+@media (max-width: 768px) {
+    
+    /* Força o Logo na esquerda e as Barrinhas na direita */
+    .header-flex {
+        display: flex !important;
+        justify-content: space-between !important; 
+        align-items: center !important;
+        padding: 10px 20px !important;
+        flex-direction: row !important;
+    }
+
+    /* Posiciona as 3 barrinhas no canto direito com respiro */
+    .menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 1100;
+        margin-left: auto; /* Empurra para a direita */
+    }
+
+    /* Estilo das barrinhas */
+    .menu-toggle .bar {
+        width: 28px;
+        height: 3px;
+        background-color: #333;
+        transition: 0.3s;
+        border-radius: 5px;
+    }
+
+    /* Menu Lateral com Animação de Deslizar */
+    .nav-list {
+        display: flex !important; /* Mantemos flex para a animação funcionar */
+        position: fixed;
+        top: 0;
+        right: -100%; /* Começa escondido à direita */
+        width: 280px; 
+        height: 100vh;
+        background-color: #8aac35;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 100px;
+        transition: right 0.5s ease-in-out; /* A ANIMAÇÃO ESTÁ AQUI */
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    /* Quando o menu está ativo, ele desliza para a posição 0 */
+    .nav-list.active {
+        right: 0 !important;
+    }
+
+    /* Estilo dos Links em Formato de CARD */
+    .nav-list li {
+        list-style: none;
+        width: 85%;
+        margin: 10px 0;
+    }
+
+    .nav-list li a {
+        display: block;
+        background-color: white;
+        color: #333;
+        text-align: center;
+        padding: 15px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        border-left: 6px solid #b7f715;
+    }
+
+    /* Animação do X (Barrinhas virando fechar) */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* Fundo escuro independente */
+.overlay {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de transparência */
+    z-index: 999; /* Fica abaixo do menu (1000) mas acima do site */
+}
+
+/* Quando o menu está ativo, mostramos o overlay */
+.overlay.active {
+    display: block;
+}
+
+/* Overlay com transição de desfoque gradual */
+.team-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Começa transparente */
+    backdrop-filter: blur(0px);    /* Começa sem desfoque */
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+/* Quando ativo, suaviza o fundo */
+.team-modal-overlay.active {
+    display: flex;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+/* O Card vindo de "baixo" e ganhando corpo */
+.team-modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    
+    /* Estado inicial para a animação */
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); /* Efeito elástico suave */
+}
+
+/* Estado final do card quando o modal abre */
+.team-modal-overlay.active .team-modal-content {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Estilo interno para os textos aparecerem com um leve delay */
+.team-modal-content h2, 
+.team-modal-content p, 
+.team-modal-content .btn-insta {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.4s ease;
+}
+
+.team-modal-overlay.active h2 { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+.team-modal-overlay.active p { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+.team-modal-overlay.active .btn-insta { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+
+.team-modal-overlay {
+    /* ... (mantenha o que já tem) ... */
+    pointer-events: auto; /* Garante que o clique seja registrado */
+}
+
+.close-team {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    z-index: 2100; /* Garante que o X fique acima de tudo no modal */
+    line-height: 1;
+}
+
+.close-team:hover {
+    color: #a3cc39;
+}
+
+/* --- SESSÃO DE CONTATOS --- */
+.contact-page-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-item img {
+    width: 40px;
+    height: 40px;
+    filter: invert(74%) sepia(35%) saturate(738%) hue-rotate(36deg) brightness(96%) contrast(88%); /* Cor verde Centralgeo */
+}
+
+.info-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    color: #666;
+}
+
+/* Redes Sociais na Seção de Contato */
+.social-contact {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.social-flex {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    background: #a3cc39;
+    transform: translateY(-3px);
+}
+
+.social-icon img {
+    width: 22px;
+}
+
+/* Card de Ação (Direita) */
+.action-card {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.btn-whatsapp-large {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #25d366;
+    color: white;
+    padding: 18px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn-whatsapp-large:hover {
+    background-color: #128c7e;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-action {
+        order: -1; /* Coloca o botão de Whats primeiro no celular */
+    }
+}
+
+a i:hover {
+    color: #E1306C; /* Cor oficial do Instagram */
+    transition: 0.3s;
+}

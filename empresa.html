@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/icon centralgeo.png" type="image/x-icon">
+    <title>Centralgeo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="overlay" class="overlay"></div>
+
+    <header>
+        <div class="container header-flex">
+        <div class="logo">
+            <img src="imagens/icon centralgeo.png" alt="Logo Centralgeo" height="60">
+        </div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="empresa.html">Empresa</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="contato.html">Contatos</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <section class="banner">
+    <h1>A Empresa</h1>
+    <p>Experiência e Comprometimento com o Meio Ambiente</p>
+</section>
+
+<main class="container">
+    <section class="intro-section">
+        <div class="text-block">
+            <span class="subtitle">Nossa Liderança</span>
+            <h2><strong>Elaine França</strong></h2>
+            <div class="divider"></div>
+            <p class="quote">"A responsabilidade social e a preservação ambiental significam um compromisso com a vida."</p>
+            <p class="description">Empresa jovem composta por uma equipe de profissionais experientes e treinados, que dedicam seus esforços em busca do melhor atendimento e satisfação dos seus clientes. A eficiência de sua equipe tem garantido, através do tempo, o aumento do número de clientes e a satisfação de um trabalho bem executado.</p>
+        </div>
+    </section>
+
+    <section class="team-section">
+    <h2 class="center-title">Técnicos Responsáveis</h2>
+    <div class="divider-center"></div>
+    
+    <div class="grid-services"> 
+        <div class="service-card team-card" onclick="openTeamModal('elaine')">
+            <h3>Elaine França de Oliveira</h3>
+            <p>Geomensora pós-graduada em Licenciamento Ambiental</p>
+            <div class="extra-info" id="data-elaine" 
+                 data-insta="https://www.instagram.com/elaine_fran?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                 data-tempo="10+ anos de experiência" 
+                 data-detalhes="Especialista em Georreferenciamento de Imóveis Rurais e Processos Incra.">
+            </div>
+        </div>
+
+        <div class="service-card team-card" onclick="openTeamModal('leane')">
+            <h3>Leane Oliveira</h3>
+            <p>Engª Florestal - Pós-graduada em Perícia</p>
+            <div class="extra-info" id="data-leane" 
+                 data-insta="https://www.instagram.com/leaneolvr/?utm_source=ig_web_button_share_sheet" 
+                 data-tempo="8 anos de atuação" 
+                 data-detalhes="Perita Ambiental judicial e especialista em licenciamento florestal no bioma Pantanal.">
+            </div>
+        </div>
+    </div>
+
+    <div id="teamModal" class="team-modal-overlay">
+        <div class="team-modal-content">
+            <span class="close-team" onclick="closeTeamModal()">&times;</span>
+            <h2 id="modal-name">Nome do Técnico</h2>
+            <h4 id="modal-cargo">Cargo</h4>
+            <hr>
+            <p><strong>Experiência:</strong> <span id="modal-tempo"></span></p>
+            <p id="modal-detalhes"></p>
+            
+            <a href="#" id="modal-insta" target="_blank" class="btn-insta">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="20">
+                Ver Instagram
+            </a>
+        </div>
+    </div>
+
+    <div class="team-photo-container" style="margin-top: 40px; text-align: center;">
+        <img src="imagens/foto-equipe.jpg" alt="Equipe Centralgeo" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    </div>
+</section>
+
+    <section class="stats-section" style="padding: 60px 0; text-align: center;">
+        <h3>Concluímos mais de 1000 trabalhos com sucesso!</h3>
+        <div class="grid-services" style="margin-top: 30px;">
+            <div class="stat-item">
+                <h2 style="color: #a3cc39;">100+</h2>
+                <p>Projetos Realizados</p>
+            </div>
+            <div class="stat-item">
+                <h2 style="color: #a3cc39;">100%</h2>
+                <p>Retorno ao Cliente</p>
+            </div>
+            <div class="stat-item">
+                <h2 style="color: #a3cc39;">1780+</h2>
+                <p>Parceiros</p>
+            </div>
+            <div class="stat-item">
+                <h2 style="color: #a3cc39;">100%</h2>
+                <p>Qualidade Técnica</p>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+        <div class="contact-bar">
+    <div class="container contact-flex">
+        <div class="contact-buttons">
+            <a href="https://wa.me/5565996651049" target="_blank" class="btn-footer whatsapp">
+                <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
+                WhatsApp
+            </a>
+            <a href="mailto:centralgeo@centralgeomt.com.br" class="btn-footer email">
+                <img src="https://cdn-icons-png.flaticon.com/512/2099/2099199.png" alt="Email">
+                Enviar E-mail
+            </a>
+        </div>
+
+        <div class="social-buttons">
+            <p>Siga-nos:</p>
+            <a href="https://www.instagram.com/centralgeomt" target="_blank" class="btn-social instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@centralgeo" target="_blank" class="btn-social tiktok">
+                <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+            </a>
+        </div>
+    </div>
+</div>
+        <div class="footer-bottom">
+            <div class="container footer-grid">
+                <div class="footer-contact">
+                    <h4>Fale Conosco</h4>
+                    <p>centralgeo@centralgeomt.com.br</p>
+                    <p>Rua Bento Alexandre dos Santos nº 718</p>
+                    <p>Centro - 78280-000 - Mirassol D'Oeste - MT</p>
+                </div>
+            </div>
+            <p class="copy">2026 CENTRALGEO - Desenvolvido por Gabriel Laurent <a href="https://www.instagram.com/gabriel_.laurent" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" 
+             alt="Instagram" 
+             style="width: 20px; vertical-align: middle; margin-left: 5px;">
+    </a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
