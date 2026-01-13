@@ -100,6 +100,20 @@ h1, h2, h3, .agro-title-main {
     font-size: 3.5rem;
     margin: 0;
     color: #fff;
+    /* ESTAS 3 LINHAS ABAIXO RESOLVEM O CORTE */
+    display: block;
+    width: 100%;
+    overflow-wrap: break-word; 
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+@media (max-width: 768px) {
+    .agro-title-main {
+        font-size: 1.8rem !important; /* Diminui o tamanho no celular para não cortar */
+        line-height: 1.2;
+        padding: 0 15px;
+    }
 }
 
 .agro-title-main span {
