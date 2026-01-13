@@ -1,0 +1,370 @@
+/* Cores Base */
+:root {
+    --verde-escuro: #0a210f;
+    --verde-limao: #a3cc39;
+    --texto-claro: #ffffff;
+}
+
+/* Banner Hero */
+.hero-agro {
+    background: linear-gradient(rgba(28, 121, 48, 0.9), rgba(20, 129, 44, 0.9)), url('imagens/campo-agro.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: var(--texto-claro);
+}
+
+.hero-agro h1 {
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+.hero-agro h1 span {
+    color: var(--verde-limao);
+}
+
+.hero-tags {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.hero-tags span {
+    background-color: var(--verde-limao);
+    color: var(--verde-escuro);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+/* Reset e Fontes */
+.agro-body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0a210f; /* Evita o branco do nada */
+    color: #fff;
+    margin: 0;
+}
+
+h1, h2, h3, .agro-title-main {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header Agro */
+.agro-header {
+    background-color: rgba(26, 122, 47, 0.95);
+    border-bottom: 2px solid #a3cc39;
+}
+
+/* Hero Section V2 */
+.hero-agro-v2 {
+    padding: 120px 0 80px;
+    background: linear-gradient(rgba(10, 33, 15, 0.7), #0a210f), url('imagens/agro-bg.jpg') center/cover;
+    text-align: center;
+}
+
+.hero-tags-v2 {
+    margin-bottom: 25px;
+}
+
+.hero-tags-v2 span {
+    background: #a3cc39;
+    color: #0a210f;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 11px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.agro-title-main {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #fff;
+}
+
+.agro-title-main span {
+    color: #a3cc39;
+}
+
+.agro-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+.agro-line-detail {
+    width: 80px;
+    height: 4px;
+    background: #a3cc39;
+    margin: 20px auto;
+}
+
+/* Conteúdo Dark */
+.agro-content-dark {
+    padding: 60px 0;
+    background-color: #0a210f;
+}
+
+.agro-intro-box {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.agro-intro-box h2 {
+    color: #a3cc39;
+    font-size: 2rem;
+}
+
+.agro-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.agro-feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 35px;
+    border-radius: 15px;
+    border-left: 5px solid #a3cc39;
+    transition: 0.3s;
+}
+
+.agro-feature-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Seção de Orçamento */
+.agro-quote-section {
+    padding: 60px 0;
+    background: #a3cc39;
+    color: #0a210f;
+}
+
+.quote-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.btn-agro-quote {
+    background: #0a210f;
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-agro-quote:hover {
+    transform: scale(1.05);
+    background: #000;
+}
+
+/* Container da seção para garantir fundo escuro e centralização */
+.agro-profile-section {
+    padding: 60px 0;
+    background-color: #0a210f;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* O CARTÃO AGORA COM TAMANHO CONTROLADO */
+.profile-card-v2 {
+    display: flex;
+    background: #112d17;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 650px; /* Tamanho máximo reduzido para não ficar imenso */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid rgba(163, 204, 57, 0.2); /* Borda sutil em verde limão */
+}
+
+/* Lado da Imagem mais estreito */
+.profile-img-side {
+    width: 35%; /* Reduzido de flex para largura fixa relativa */
+    background: url('imagens/pasto.png') center/cover;
+    min-height: 250px; /* Altura menor e mais proporcional */
+}
+
+/* Lado das Informações */
+.profile-info-side {
+    width: 65%;
+    padding: 30px; /* Padding reduzido para compactar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-info-side h3 { 
+    font-size: 1.8rem; /* Fonte menor */
+    margin: 0; 
+    color: #fff;
+}
+
+.prof-tag { 
+    color: #a3cc39; 
+    font-weight: bold; 
+    font-size: 1rem; 
+    display: block;
+    margin-bottom: 5px;
+}
+
+.prof-reg { 
+    font-size: 0.85rem;
+    opacity: 0.7; 
+    font-style: italic; 
+    margin-bottom: 15px;
+    color: #eee;
+}
+
+.prof-contact-list p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+/* Ajuste para Celular */
+@media (max-width: 600px) {
+    .profile-card-v2 {
+        flex-direction: column;
+        max-width: 350px; /* Estilo cartão vertical no celular */
+    }
+    .profile-img-side {
+        width: 100%;
+        height: 180px;
+    }
+    .profile-info-side {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+/* Container de Centralização */
+.agro-profile-mini {
+    padding: 40px 0;
+    background-color: #0a210f; /* Fundo escuro contínuo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* O CARTÃO COMPACTO */
+.digital-card {
+    background: #112d17;
+    width: 100%;
+    max-width: 380px; /* Tamanho real de um cartão no celular/desktop */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border: 1px solid rgba(163, 204, 57, 0.3);
+    text-align: center;
+}
+
+.card-header-agro {
+    height: 120px;
+    background: #0a210f;
+    position: relative;
+    border-bottom: 4px solid #a3cc39;
+}
+
+.thumb-agro {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #a3cc39;
+    object-fit: cover;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+}
+
+.card-body-agro {
+    padding: 60px 25px 30px;
+}
+
+.card-body-agro h3 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.tag-verde {
+    color: #a3cc39;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.cft-number {
+    font-size: 0.8rem;
+    color: #888;
+    margin: 5px 0 20px;
+}
+
+/* Links de Contato */
+.card-links {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 0;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.link-item:hover {
+    color: #a3cc39;
+    padding-left: 5px;
+}
+
+/* BOTÃO DE SOLICITAR ORÇAMENTO */
+.btn-solicitar {
+    display: block;
+    background: #a3cc39;
+    color: #0a210f;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-solicitar:hover {
+    background: #fff;
+    transform: translateY(-3px);
+}
