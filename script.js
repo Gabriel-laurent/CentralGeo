@@ -77,4 +77,17 @@ window.addEventListener('click', function(event) {
     if (event.target === modal) {
         closeTeamModal();
     }
+
 });
+
+// Mostrar/Esconder botão de topo conforme o scroll
+window.onscroll = function() {
+    const btnTop = document.getElementById("btnTop");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btnTop.style.opacity = "1";
+        btnTop.style.visibility = "visible";
+    } else {
+        btnTop.style.opacity = "0";
+        btnTop.style.visibility = "hidden";
+    }
+};
