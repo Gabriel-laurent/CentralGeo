@@ -669,4 +669,51 @@ button:active, .btn-whats:active {
 a i:hover {
     color: #E1306C; /* Cor oficial do Instagram */
     transition: 0.3s;
+
+}
+
+/* Container dos botões flutuantes */
+.floating-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column; /* Coloca um em cima do outro */
+    gap: 10px; /* Espaço entre eles */
+    z-index: 9999; /* Garante que fiquem acima de tudo */
+}
+
+.btn-float {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #a3cc39; /* Verde limão Centralgeo */
+    border: none;
+    color: #0a210f; /* Verde escuro para o ícone */
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-float:hover {
+    transform: scale(1.1);
+    background-color: #ffffff;
+}
+
+.btn-float .icon {
+    line-height: 0;
+}
+
+/* Responsividade: Botões um pouco menores no celular */
+@media (max-width: 768px) {
+    .btn-float {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
 }
