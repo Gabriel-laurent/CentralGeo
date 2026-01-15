@@ -113,3 +113,47 @@ function openTeamModal(id) {
 
     modal.classList.add('active');
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.getElementById('welcome-overlay');
+    const text = document.getElementById('fifteen-years');
+
+    // Se o elemento não existir, para o código aqui para não dar erro
+    if (!overlay || !text) return;
+
+    // Função que cria a explosão
+    function createExplosion() {
+        const rect = text.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+
+        for (let i = 0; i < 50; i++) { // Aumentei para 50 partículas
+            const particle = document.createElement('div');
+            particle.className = 'firework-particle';
+            
+            const size = Math.random() * 6 + 2;
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.left = centerX + 'px';
+            particle.style.top = centerY + 'px';
+
+            const angle = Math.random() * Math.PI * 2;
+            const velocity = Math.random() * 150 + 50;
+            const tx = Math.cos(angle) * velocity;
+            const ty = Math.sin(angle) * velocity;
+
+            particle.style.setProperty('--x', tx + 'px');
+            particle.style.setProperty('--y', ty + 'px');
+
+            document.body.appendChild(particle);
+            setTimeout(() => particle.remove(), 1500);
+        }
+    }
+
+    // Cronograma da animação:
+    setTimeout(createExplosion, 1200); // Explode após 1.2 segundos
+    
+    setTimeout(() => {
+        overlay.classList.add('hidden'); // Some tudo após 3.5 segundos
+    }, 3500);
+});
