@@ -77,7 +77,6 @@ window.addEventListener('click', function(event) {
     if (event.target === modal) {
         closeTeamModal();
     }
-
 });
 
 // Mostrar/Esconder botão de topo conforme o scroll
@@ -91,3 +90,26 @@ window.onscroll = function() {
         btnTop.style.visibility = "hidden";
     }
 };
+
+function openTeamModal(id) {
+    const info = document.getElementById('data-' + id);
+    const modal = document.getElementById('teamModal');
+    
+    // Pega os dados dos atributos data-
+    const nome = info.parentElement.querySelector('h3').innerText;
+    const cargo = info.parentElement.querySelector('p').innerText;
+    const foto = info.getAttribute('data-foto'); // PEGA A FOTO
+    const tempo = info.getAttribute('data-tempo');
+    const detalhes = info.getAttribute('data-detalhes');
+    const insta = info.getAttribute('data-insta');
+
+    // Preenche o modal
+    document.getElementById('modal-name').innerText = nome;
+    document.getElementById('modal-cargo').innerText = cargo;
+    document.getElementById('modal-img').src = foto; // COLOCA A FOTO NO MODAL
+    document.getElementById('modal-tempo').innerText = tempo;
+    document.getElementById('modal-detalhes').innerText = detalhes;
+    document.getElementById('modal-insta').href = insta;
+
+    modal.classList.add('active');
+}
