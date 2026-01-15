@@ -669,7 +669,6 @@ button:active, .btn-whats:active {
 a i:hover {
     color: #E1306C; /* Cor oficial do Instagram */
     transition: 0.3s;
-
 }
 
 /* Container dos botões flutuantes */
@@ -712,8 +711,8 @@ a i:hover {
 /* Responsividade: Botões um pouco menores no celular */
 @media (max-width: 768px) {
     .btn-float {
-        width: 45px;
-        height: 45px;
+        width: 60px;
+        height: 60px;
         font-size: 18px;
     }
 }
@@ -756,4 +755,33 @@ a i:hover {
     .banner h1 {
         font-size: 2.2rem;
     }
+}
+
+/* Isso vai travar o tamanho da imagem e impedir o bug */
+#modal-img {
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    
+    /* Remove o fundo branco interno que pode causar os pontos */
+    background-color: transparent !important;
+    
+    /* Cria a borda verde sem deixar vazar o fundo branco da imagem */
+    border: 3px solid #a3cc39 !important;
+    
+    /* Esse comando ajuda a suavizar a borda circular (Anti-aliasing) */
+    outline: 1px solid transparent; 
+    
+    /* Sombra interna muito leve para esconder qualquer pixel branco restante */
+    box-shadow: 0 0 0 1px #a3cc39; 
+
+    display: block !important;
+    margin: 15px auto !important;
+}
+
+/* Ajuste para o texto não ficar colado na imagem */
+#modal-cargo {
+    margin-top: 10px;
+    color: #8aac35;
 }
