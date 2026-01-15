@@ -114,6 +114,7 @@ function openTeamModal(id) {
     modal.classList.add('active');
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.getElementById('welcome-overlay');
     const text = document.getElementById('fifteen-years');
@@ -138,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
             particle.style.top = centerY + 'px';
 
             const angle = Math.random() * Math.PI * 2;
-            const velocity = Math.random() * 150 + 50;
+            const velocity = Math.random() * 300 + 100;
             const tx = Math.cos(angle) * velocity;
             const ty = Math.sin(angle) * velocity;
 
