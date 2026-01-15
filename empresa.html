@@ -58,11 +58,12 @@
     <div class="grid-services"> 
         <div class="service-card team-card" onclick="openTeamModal('elaine')">
             <h3>Elaine França de Oliveira</h3>
-            <p>Geomensora pós-graduada em Licenciamento Ambiental</p>
+            <p>Geomensora pós-graduada em Licenciamento Ambiental, Bacharel em Direito Agrario</p>
             <div class="extra-info" id="data-elaine" 
+                 data-foto="imagens/Elaine.JPEG"
                  data-insta="https://www.instagram.com/elaine_fran?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
-                 data-tempo="10+ anos de experiência" 
-                 data-detalhes="Especialista em Georreferenciamento de Imóveis Rurais e Processos Incra.">
+                 data-tempo="Quinze anos de experiência profissional" 
+                 data-detalhes="Especialista em Georreferenciamento de Imóveis Rurais, Processos Incra e Usucapião.">
             </div>
         </div>
 
@@ -70,9 +71,10 @@
             <h3>Leane Oliveira</h3>
             <p>Engª Florestal - Pós-graduada em Perícia</p>
             <div class="extra-info" id="data-leane" 
+                 data-foto="imagens/Leane.JPEG"
                  data-insta="https://www.instagram.com/leaneolvr/?utm_source=ig_web_button_share_sheet" 
-                 data-tempo="8 anos de atuação" 
-                 data-detalhes="Perita Ambiental judicial e especialista em licenciamento florestal no bioma Pantanal.">
+                 data-tempo="12 anos de atuação" 
+                 data-detalhes="Perita Ambiental judicial e especialista em licenciamento florestal em bioma.">
             </div>
         </div>
     </div>
@@ -81,6 +83,7 @@
         <div class="team-modal-content">
             <span class="close-team" onclick="closeTeamModal()">&times;</span>
             <h2 id="modal-name">Nome do Técnico</h2>
+            <img id="modal-img" src="" alt="Foto do Técnico" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 15px auto; display: block; border: 3px solid #a3cc39;">
             <h4 id="modal-cargo">Cargo</h4>
             <hr>
             <p><strong>Experiência:</strong> <span id="modal-tempo"></span></p>
@@ -93,8 +96,12 @@
         </div>
     </div>
 
+    <h2 class="center-title">Equipe CentralGeo</h2>
+
+    <div class="divider-center"></div>
+
     <div class="team-photo-container" style="margin-top: 40px; text-align: center;">
-        <img src="imagens/foto-equipe.jpg" alt="Equipe Centralgeo" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <img src="imagens/equipe.JPEG" alt="Equipe Centralgeo" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
     </div>
 </section>
 
@@ -128,7 +135,7 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
                 WhatsApp
             </a>
-            <a href="mailto:centralgeoagro22@gmail.com" class="btn-footer email">
+            <a href="mailto:centralgeo@centralgeomt.com.br" class="btn-footer email">
                 <img src="https://cdn-icons-png.flaticon.com/512/2099/2099199.png" alt="Email">
                 Enviar E-mail
             </a>
@@ -173,8 +180,6 @@
         <span class="icon">←</span>
     </button>
 </div>
-        
+
 </body>
 </html>
-
-
